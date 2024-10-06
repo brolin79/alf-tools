@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-import weatherApi from "../../api/weatherApi";
 
 import { onLoadData } from "../slices/weatherSlice";
+import  generateApi from "../../api/generateApi";
 
 
 export const useWeatherStore = () => {
@@ -16,6 +16,7 @@ export const useWeatherStore = () => {
 
         try {
 
+            const weatherApi = generateApi("weather");
             const response = await weatherApi.get(url);
             const datos = response.data;
 

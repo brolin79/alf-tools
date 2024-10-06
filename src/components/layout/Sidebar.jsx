@@ -17,7 +17,7 @@ export const Sidebar = () => {
                 </li>
 
                 <li className="nav-item menu-items active">
-                    <a className="nav-link" href="index.html">
+                    <a className="nav-link" href="/">
                         <span className="menu-icon">
                             <i className="mdi mdi-home-floor-a"></i>
                         </span>
@@ -30,7 +30,7 @@ export const Sidebar = () => {
                         <span className="menu-icon">
                             <i className="mdi mdi-laptop"></i>
                         </span>
-                        <span className="menu-title">Basic UI Elements</span>
+                        <span className="menu-title">Generadores</span>
                         <i className="menu-arrow"></i>
                     </a>
                     <div className="collapse" id="ui-basic">
@@ -43,12 +43,21 @@ export const Sidebar = () => {
                 </li>
 
                 <li className="nav-item menu-items">
-                    <a className="nav-link" href="pages/forms/basic_elements.html">
+                    <a className="nav-link" data-toggle="collapse" href="#sub-imagenes" aria-expanded="false" aria-controls="sub-imagenes">
                         <span className="menu-icon">
-                            <i className="mdi mdi-playlist-play"></i>
+                            <i className="mdi mdi-image-multiple"></i>
                         </span>
-                        <span className="menu-title">Form Elements</span>
+                        <span className="menu-title">Imagenes</span>
+                        <i className="menu-arrow"></i>
                     </a>
+                    <div className="collapse" id="sub-imagenes">
+                        <ul className="nav flex-column sub-menu">
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="emojis" >Emojis</a>
+                            </li>
+                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/dropdowns.html">Gifs</a></li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li className="nav-item menu-items">
@@ -66,52 +75,6 @@ export const Sidebar = () => {
                             <i className="mdi mdi-chart-bar"></i>
                         </span>
                         <span className="menu-title">Charts</span>
-                    </a>
-                </li>
-
-                <li className="nav-item menu-items">
-                    <a className="nav-link" href="pages/icons/mdi.html">
-                        <span className="menu-icon">
-                            <i className="mdi mdi-contacts"></i>
-                        </span>
-                        <span className="menu-title">Icons</span>
-                    </a>
-                </li>
-
-                <li className="nav-item menu-items">
-                    <a className="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                        <span className="menu-icon">
-                            <i className="mdi mdi-security"></i>
-                        </span>
-                        <span className="menu-title">User Pages</span>
-                        <i className="menu-arrow"></i>
-                    </a>
-                    <div className="collapse" id="auth">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/register.html"> Register </a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li className="nav-item menu-items">
-                    <a className="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-                        <span className="menu-icon">
-                            <i className="mdi mdi-file-document-box"></i>
-                        </span>
-                        <span className="menu-title">Documentation</span>
-                    </a>
-                </li>
-
-                <li className="nav-item menu-items">
-                    <a className="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-                        <span className="menu-icon">
-                            <i className="mdi mdi-file-document-box"></i>
-                        </span>
-                        <span className="menu-title">dfsdfs</span>
                     </a>
                 </li>
                 
