@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+
 export const weatherSlice = createSlice({
     name: 'weather',
     initialState: { 
@@ -7,10 +8,11 @@ export const weatherSlice = createSlice({
     },
     reducers: {
         onLoadData: ( state, { payload } ) => {
-            state.data = payload;
+            state.data = payload.resultado;
         },
     },
 });
+
 
 export const { onLoadData } = weatherSlice.actions;
 export default weatherSlice.reducer;

@@ -23,14 +23,14 @@ export const HomePage = () => {
             <div className="row">
 
                 <CardLight >
-                    Bienvenido a ALF Tools
+                    Bienvenido a ALF Tools 🤖
                 </CardLight>
 
             </div>
 
             <div className="row">
 
-                <Weather data={data.resultado} />
+                <Weather data={data} />
                 
             </div>
 

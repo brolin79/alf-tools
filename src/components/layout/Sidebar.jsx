@@ -53,9 +53,11 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-imagenes">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="emojis" >Emojis</a>
+                                <a className="nav-link" href="emojis">Emojis</a>
                             </li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/dropdowns.html">Gifs</a></li>
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="gifs">Gifs</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
