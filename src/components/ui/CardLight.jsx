@@ -2,7 +2,7 @@
 export const CardLight = ({ children }) => {
     return (
 
-        <div className="col-12 grid-margin stretch-card">
+        <div className="col-xl-12 col-sm-12 grid-margin stretch-card">
             <div className="card corona-gradient-card">
                 <div className="card-body py-0 px-0 px-sm-3">
                     <div className="row d-flex justify-content-center">

@@ -66,7 +66,7 @@ export const EmojisPage = () => {
                     <Card col="12">
                         <div className="row">
 
-                            <div className="col-4">
+                            <div className="col-xl-4 col-sm-12">
 
                                 <h4 className="card-title">Buscar Emojis (en ingles)</h4>
 
@@ -78,10 +78,10 @@ export const EmojisPage = () => {
 
                             </div>
 
-                            <div className="col-8">
+                            <div className="col-xl-4 col-sm-12">
                                 <div className="row">
 
-                                    <div className="alert alert-primary col-6" role="alert" hidden={!error}>
+                                    <div className="alert alert-primary col-xl-12 col-sm-12" role="alert" hidden={!error}>
                                         No se encontraron resultados
                                     </div>
 

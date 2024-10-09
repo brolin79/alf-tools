@@ -3,10 +3,10 @@ export const Sidebar = () => {
     return (
         <nav className="sidebar sidebar-offcanvas" id="sidebar">
             <div className="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a className="sidebar-brand brand-logo" href="index.html">
+                <a className="sidebar-brand brand-logo" href="inicio">
                     <img src={`assets/images/logo.svg`} alt={"logo"} />
                 </a>
-                <a className="sidebar-brand brand-logo-mini" href="index.html">
+                <a className="sidebar-brand brand-logo-mini" href="inicio">
                     <img src="assets/images/logo-mini.png" alt="logo" />
                 </a>
             </div>
@@ -16,8 +16,8 @@ export const Sidebar = () => {
                     <span className="nav-link">TOOLS</span>
                 </li>
 
-                <li className="nav-item menu-items active">
-                    <a className="nav-link" href="/">
+                <li className="nav-item menu-items">
+                    <a className="nav-link" href="inicio">
                         <span className="menu-icon">
                             <i className="mdi mdi-home-floor-a"></i>
                         </span>
@@ -61,14 +61,22 @@ export const Sidebar = () => {
                         </ul>
                     </div>
                 </li>
-
+                
                 <li className="nav-item menu-items">
-                    <a className="nav-link" href="pages/tables/basic-table.html">
+                    <a className="nav-link" data-toggle="collapse" href="#sub-misc" aria-expanded="false" aria-controls="sub-imagenes">
                         <span className="menu-icon">
                             <i className="mdi mdi-table-large"></i>
                         </span>
-                        <span className="menu-title">Tables</span>
+                        <span className="menu-title">Miscelanea</span>
+                        <i className="menu-arrow"></i>
                     </a>
+                    <div className="collapse" id="sub-misc">
+                        <ul className="nav flex-column sub-menu">
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="weather">Weather</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li className="nav-item menu-items">

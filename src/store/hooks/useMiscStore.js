@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
 
-import { onLoadData } from "../slices/weatherSlice";
+import { onLoadData } from "../slices/miscSlice";
 import  generateApi from "../../api/generateApi";
 
 
-export const useWeatherStore = () => {
+export const useMiscStore = () => {
 
     const dispatch = useDispatch();
     const { data } = useSelector(state => state.weather);

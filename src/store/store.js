@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import weatherSlice from "./slices/weatherSlice";
+import miscSlice from "./slices/miscSlice";
 import imagesSlice from "./slices/imagesSlice";
 
 
 export const store = configureStore({
     reducer: {
-        weather: weatherSlice,
+        weather: miscSlice,
         images: imagesSlice
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({

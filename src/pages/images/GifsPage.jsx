@@ -64,7 +64,7 @@ export const GifsPage = () => {
                     <Card col="12">
                         <div className="row">
 
-                            <div className="col-4">
+                            <div className="col-xl-4 col-sm-12">
 
                                 <h4 className="card-title">Buscar Gifs</h4>
 
@@ -76,7 +76,7 @@ export const GifsPage = () => {
 
                             </div>
 
-                            <div className="col-8">
+                            <div className="col-xl-4 col-sm-12">
                                 <div className="row">
 
                                     <div className="alert alert-primary col-6" role="alert" hidden={!error}>
@@ -84,7 +84,7 @@ export const GifsPage = () => {
                                     </div>
 
 
-                                    <img src={gif?.url} alt={gif?.title} />
+                                    <img src={gif?.url} alt={gif?.title} className="col-12" />
                                     
 
                                 </div>
