@@ -1,8 +1,25 @@
+import { useEffect, useState } from "react"
+import { Firebase } from "../api/firebaseApi";
 import { MainLayout } from "../components/layout/MainLayout"
 import { CardNews, CardLight } from "../components/ui"
 
 
+const firebase = new Firebase();
+
 export const HomePage = () => {
+
+    const [novedades, setNovedades] = useState(null);
+
+    useEffect(() => {
+        (async () => {
+          try {
+            const response = await firebase.getNovedades();
+            setNovedades(response);
+          } catch (error) {
+            console.error(error);
+          }
+        })();
+      }, []);
 
 
     return (
@@ -30,37 +47,20 @@ export const HomePage = () => {
                                 <div className="col-12">
                                     <div className="preview-list">
 
-                                        <CardNews 
-                                            color="warning" 
-                                            icon="image-multiple" 
-                                            titulo="Gifs Tool" 
-                                            texto="Busca gifs animados para apoyar tu creatividad" 
-                                            fecha="05 Oct, 2024" 
-                                        />
-
-                                        <CardNews 
-                                            color="warning" 
-                                            icon="image-multiple" 
-                                            titulo="Emojis Tool" 
-                                            texto="Busca tus emojis favoritos para usar en tus redes sociales" 
-                                            fecha="05 Oct, 2024" 
-                                        />
-
-                                        <CardNews 
-                                            color="danger" 
-                                            icon="table-large" 
-                                            titulo="Weather Tool" 
-                                            texto="Primera herramienta finalizada para poder ver el tiempo sin salir de casa" 
-                                            fecha="03 Oct, 2024" 
-                                        />
-
-                                        <CardNews 
-                                            color="success" 
-                                            icon="home-floor-a" 
-                                            titulo="Inauguración de ALF Tools" 
-                                            texto="Lanzamiento de este proyecto con gran ilusión" 
-                                            fecha="01 Oct, 2024" 
-                                        />
+                                        {
+                                            (novedades) ? novedades.map((novedad, index) => {
+                                                return (
+                                                    <CardNews 
+                                                        key    = {index}
+                                                        color  = {novedad.color}
+                                                        icon   = {novedad.icon}
+                                                        titulo = {novedad.titulo}
+                                                        texto  = {novedad.texto}
+                                                        fecha  = {novedad.fecha}
+                                                    />
+                                                )
+                                            }) : null
+                                        }
 
                                     </div>{/* preview-list end */}
                                 </div> {/* col end */}
