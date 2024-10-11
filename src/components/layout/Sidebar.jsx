@@ -10,6 +10,7 @@ export const Sidebar = () => {
                     <img src="assets/images/logo-mini.png" alt="logo" />
                 </a>
             </div>
+            
             <ul className="nav">
 
                 <li className="nav-item nav-category">
