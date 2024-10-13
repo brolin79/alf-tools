@@ -1,16 +1,16 @@
 import { useDispatch, useSelector } from "react-redux"
 
-import { onLoadData } from "../slices/miscSlice";
+import { onLoadWeather } from "../slices/miscSlice";
 import  generateApi from "../../api/generateApi";
 
 
 export const useMiscStore = () => {
 
     const dispatch = useDispatch();
-    const { data } = useSelector(state => state.weather);
+    const { data } = useSelector(state => state.misc);
 
 
-    const startLoadData = async () => {
+    const startWeather = async () => {
 
         const url = "/forecast?latitude=43.2957&longitude=-5.6842&hourly=temperature_2m,precipitation_probability";
 
@@ -41,7 +41,7 @@ export const useMiscStore = () => {
                 };
             });
 
-            dispatch(onLoadData({ resultado }));
+            dispatch(onLoadWeather({ resultado }));
 
         } catch (error) {
             console.log(error);
@@ -53,6 +53,6 @@ export const useMiscStore = () => {
         // Propiedades
         data,
         // Metodos
-        startLoadData,
+        startWeather,
     }
 }

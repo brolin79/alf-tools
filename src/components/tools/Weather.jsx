@@ -19,7 +19,7 @@ export const Weather = ({ data }) => {
                                             <img src="assets/images/weather/rain.png" alt="Lluvia" /> :
                                             (event.probabilidadMedia > 15) ?
                                                 <img src="assets/images/weather/cloudy.png" alt="Nublado" /> :
-                                                (event.probabilidadMedia > 0) ?
+                                                (event.probabilidadMedia >= 0) ?
                                                     <img src="assets/images/weather/sun.png" alt="Soleado" /> :
                                                     null
                                 }

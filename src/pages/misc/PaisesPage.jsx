@@ -7,10 +7,10 @@ import { Weather } from "../../components/tools/weather"
 
 export const WeatherPage = () => {
 
-    const { startWeather, data } = useMiscStore();
+    const { startLoadData, data } = useMiscStore();
 
     useEffect(() => {
-        startWeather();
+        startLoadData();
     }, []);
 
 

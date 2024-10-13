@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 
-export const weatherSlice = createSlice({
-    name: 'weather',
+export const miscSlice = createSlice({
+    name: 'misc',
     initialState: { 
         data: null,
     },
     reducers: {
-        onLoadData: ( state, { payload } ) => {
+        onLoadWeather: ( state, { payload } ) => {
             state.data = payload.resultado;
         },
     },
 });
 
 
-export const { onLoadData } = weatherSlice.actions;
-export default weatherSlice.reducer;
+export const { onLoadWeather } = miscSlice.actions;
+export default miscSlice.reducer;

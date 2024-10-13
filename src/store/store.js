@@ -7,7 +7,7 @@ import alfSlice from "./slices/alfSlice";
 
 export const store = configureStore({
     reducer: {
-        weather: miscSlice,
+        misc: miscSlice,
         images: imagesSlice,
         apidb: alfSlice
     },
