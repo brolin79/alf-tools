@@ -77,6 +77,11 @@ export const Sidebar = () => {
                                 <a className="nav-link" href="weather">Weather</a>
                             </li>
                         </ul>
+                        <ul className="nav flex-column sub-menu">
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="paises">Paises</a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
 

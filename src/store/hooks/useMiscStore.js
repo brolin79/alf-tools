@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux"
 
-import { onLoadWeather } from "../slices/miscSlice";
+import { onLoadWeather, onGetCountryInfo } from "../slices/miscSlice";
 import  generateApi from "../../api/generateApi";
 
 
 export const useMiscStore = () => {
 
     const dispatch = useDispatch();
-    const { data } = useSelector(state => state.misc);
+    const { data, info } = useSelector(state => state.misc);
 
 
     const startWeather = async () => {
@@ -48,11 +48,32 @@ export const useMiscStore = () => {
         }
 
     };
+    
+
+    const startCountryInfo = async (search) => {
+
+        const url = `/name/${ search }`;
+
+        try {
+
+            const countryApi = generateApi("country");
+            const response = await countryApi.get(url);
+            const resultado = response.data[0];
+
+            dispatch(onGetCountryInfo({ resultado }));
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    };
 
     return {
         // Propiedades
         data,
+        info,
         // Metodos
         startWeather,
+        startCountryInfo
     }
 }

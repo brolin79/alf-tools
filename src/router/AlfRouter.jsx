@@ -6,6 +6,7 @@ import { EmojisPage } from "../pages/images/EmojisPage";
 import { GifsPage } from "../pages/images/GifsPage";
 import { WeatherPage } from "../pages/misc/WeatherPage";
 import { AlfTest } from "../pages/test/alfTest";
+import { CountryPage } from "../pages/misc/CountryPage";
 
 
 
@@ -20,6 +21,7 @@ export const AlfRouter = () => {
             <Route path="/gifs" element={<GifsPage />} />
 
             <Route path="/weather" element={ <WeatherPage /> } />
+            <Route path="/paises" element={ <CountryPage /> } />
 
             <Route path="/alftest" element={ <AlfTest /> } />
 
