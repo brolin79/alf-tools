@@ -1,16 +1,19 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
-import { useMiscStore } from "../../store/hooks/useMiscStore"
 import { Weather } from "../../components/tools/weather"
+import { MiscClass } from "../../classes/miscClass"
 
 
 export const WeatherPage = () => {
 
-    const { startWeather, data } = useMiscStore();
+    const miscClass = new MiscClass();
+
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        startWeather();
+        miscClass.getWeather()
+            .then(data => setData(data))
     }, []);
 
 

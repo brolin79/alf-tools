@@ -58,14 +58,14 @@ export const CountryPage = () => {
             <div className="row">
 
                 <CardLight >
-                    Buscar información de un pais
+                    Buscar información de un pais 🏴‍☠️
                 </CardLight>
 
             </div>
 
             <div className="row">
 
-                <div className="form-group position-relative col-6" >
+                <div className="form-group position-relative col-13 col-xl-6" >
                     <input
                         type="text"
                         className="form-control"

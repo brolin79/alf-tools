@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react"
 import { MainLayout } from "../components/layout/MainLayout"
 import { CardNews, CardLight } from "../components/ui"
-import { useAlfStore } from "../store/hooks/useAlfStore"
+import { AlfClass } from "../classes/alfClass"
 
 
 export const HomePage = () => {
 
-    
-    const { startGetData, data, status } = useAlfStore();
+    const alfClass = new AlfClass();
 
-    const [error, setError] = useState(false);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        startGetData("get_novedades");
+        alfClass.getNovedades()
+            .then(
+                data => setData(data.datos)
+            )
     }, []);
 
     return (
@@ -40,7 +42,7 @@ export const HomePage = () => {
                                 <div className="col-12">
                                     <div className="preview-list">
                                         {
-                                            (data) ?
+                                            (data) &&
                                                 data.map((novedad, index) => (
                                                     <CardNews
                                                         key    = {novedad.id}
@@ -49,13 +51,11 @@ export const HomePage = () => {
                                                         titulo = {novedad.titulo}
                                                         texto  = {novedad.texto}
                                                         fecha  = {novedad.fecha}
+                                                        enlace = {novedad.enlace}
                                                     />
                                                 ))
-                                                :
-                                                <div className="alert alert-primary col-xl-12 col-sm-12" role="alert" hidden={!error}>
-                                                    No se encontraron resultados
-                                                </div>
                                         }
+
                                     </div>{/* preview-list end */}
                                 </div> {/* col end */}
                             </div> {/* row end */}

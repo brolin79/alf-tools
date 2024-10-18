@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
-import { useImagesStore } from "../../store/hooks/useImagesStore";
 import { SearchForm } from "../../components/uiForms/SearchForm";
+import { ImagesClass } from "../../classes/imagesClass"
 
 
 export const GifsPage = () => {
 
-    const { startSearchGifs, data, status } = useImagesStore();
+    const imagesClass = new ImagesClass();
 
     const [formValues, setFormValues] = useState({
         name: '',
@@ -15,18 +15,6 @@ export const GifsPage = () => {
 
     const [gif, setGif] = useState([]);
     const [error, setError] = useState(false);
-
-    useEffect(() => {
-
-        if (status === 'ko'){
-            setError(true);
-            return;  
-        } else {
-            setError(false);
-            setGif(data);
-        }
-            
-    }, [data])
 
 
     const onInputChange = (e) => {
@@ -42,8 +30,16 @@ export const GifsPage = () => {
         const { name } = formValues;
 
         if (name.trim().length < 2) return;
-        
-        await startSearchGifs(name);
+
+        imagesClass.searchGifs(name)
+            .then((data) => {
+                if (data === null) {
+                    setError(true);
+                    return;
+                }
+
+                setGif(data);
+            });
     }
 
     return (
@@ -53,7 +49,7 @@ export const GifsPage = () => {
             <div className="row">
 
                 <CardLight >
-                    Buscador de gifs
+                    Buscador de gifs 🤹🏿‍♀️
                 </CardLight>
 
             </div>
@@ -71,7 +67,7 @@ export const GifsPage = () => {
                                 <form className="form-inline" onSubmit={onSubmit}>
 
                                     <SearchForm name="name" placeholder="Alf" value={formValues.name} onInputChange={onInputChange} />
-                                    
+
                                 </form>
 
                             </div>
@@ -85,7 +81,7 @@ export const GifsPage = () => {
 
 
                                     <img src={gif?.url} alt={gif?.title} className="col-12" />
-                                    
+
 
                                 </div>
                             </div>
@@ -97,4 +93,5 @@ export const GifsPage = () => {
 
         </MainLayout>
     )
+
 }
