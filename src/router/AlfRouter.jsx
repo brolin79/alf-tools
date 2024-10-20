@@ -8,7 +8,6 @@ import { EmojisPage } from "../pages/images/EmojisPage";
 import { GifsPage } from "../pages/images/GifsPage";
 import { WeatherPage } from "../pages/misc/WeatherPage";
 import { CountryPage } from "../pages/misc/CountryPage";
-import { AlfTest } from "../pages/test/alfTest";
 
 
 export const AlfRouter = () => {
@@ -26,8 +25,6 @@ export const AlfRouter = () => {
 
             <Route path="/weather" element={ <WeatherPage /> } />
             <Route path="/paises" element={ <CountryPage /> } />
-
-            <Route path="/alftest" element={ <AlfTest /> } />
 
             <Route path="/*" element={ <Navigate to="/" /> } />
 
