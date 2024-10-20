@@ -3,6 +3,7 @@ import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
 import { paises } from "../../data/paisesSeeder"
 import { MiscClass } from "../../classes/miscClass"
+import { AutocompleteInput } from "../../components/ui/Autocomplete"
 
 
 export const CountryPage = () => {
@@ -24,30 +25,9 @@ export const CountryPage = () => {
 
 
     // estados para el desplegable
-    const [inputValue, setInputValue] = useState('');
-    const [filteredCountries, setFilteredCountries] = useState([]);
-
-    const handleInputChange = (e) => {
-        const value = e.target.value;
-        setInputValue(value);
-
-        // Filtrar los países basados en el input
-        if (value) {
-            const filtered = dataPaises.filter((pais) =>
-                pais.nombre.toLowerCase().includes(value.toLowerCase())
-            );
-            setFilteredCountries(filtered);
-        } else {
-            setFilteredCountries([]);
-        }
-    };
-
-    const handleSelect = async (nombre, name) => {
-        setInputValue(nombre);
-        setFilteredCountries([]);
-
-        const pais = await miscClass.countryInfo(name);
-        setInfoPais(pais);
+    const handleSelect = async (pais) => {
+      const paisInfo = await miscClass.countryInfo(pais.name);
+      setInfoPais(paisInfo);
     };
 
 
@@ -65,30 +45,16 @@ export const CountryPage = () => {
 
             <div className="row">
 
-                <div className="form-group position-relative col-13 col-xl-6" >
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Escribe el nombre de un país"
-                        value={inputValue}
-                        onChange={handleInputChange}
-                        style={{ borderRadius: '5px' }}
-                    />
-                    {filteredCountries.length > 0 && (
-                        <ul className="list-group position-absolute w-100 bg-dark text-white" style={{ zIndex: 1, maxHeight: '200px', overflowY: 'auto' }}>
-                            {filteredCountries.map((pais) => (
-                                <li
-                                    key={pais.name}
-                                    className="list-group-item list-group-item-action text-white bg-dark"
-                                    onClick={() => handleSelect(pais.nombre, pais.name)}
-                                    style={{ cursor: 'pointer' }}
-                                >
-                                    {pais.nombre}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
+                <AutocompleteInput
+                    placeholder="Escribe el nombre de un país"
+                    data={dataPaises}
+                    onSelect={handleSelect}
+                    displayKey="nombre"
+                    valueKey="name"
+                    filterFunction={(pais, value) =>
+                        pais.nombre.toLowerCase().includes(value.toLowerCase())
+                    }
+                />
 
             </div>
 

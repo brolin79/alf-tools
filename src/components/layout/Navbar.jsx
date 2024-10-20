@@ -1,5 +1,15 @@
+import { AutocompleteInput } from "../ui/Autocomplete"
+import { mapaweb } from "../../data/mapawebSeeder";
+
 
 export const Navbar = () => {
+
+
+    const handleSelect = async (mapaweb) => {
+        //redirect
+        window.location.href = `${mapaweb.enlace}`;
+    };
+
     return (
         <nav className="navbar p-0 fixed-top d-flex flex-row">
             <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
@@ -14,82 +24,87 @@ export const Navbar = () => {
                     <span className="mdi mdi-menu"></span>
                 </button>
 
-                <ul className="navbar-nav w-100">
-                    <li className="nav-item w-100">
-                        <form className="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                            <input type="text" className="form-control" placeholder="Search products" />
-                        </form>
+                <ul className="navbar-nav w-100 mt-3">
+                    <li className="nav-item w-100 mt-4 mt-md-0 d-none d-lg-flex search">
+                        <AutocompleteInput
+                            placeholder="Buscar Tools"
+                            data={mapaweb}
+                            onSelect={handleSelect}
+                            displayKey="enlace"
+                            valueKey="enlace"
+                            filterFunction={(mapaweb, value) =>
+                                mapaweb.tags.toLowerCase().includes(value.toLowerCase())
+                            }
+                        />
                     </li>
                 </ul>
 
                 <ul className="navbar-nav navbar-nav-right">
-                    <li className="nav-item dropdown d-none d-lg-block">
+                    <li className="nav-item dropdown d-lg-block">
 
                         <a className="nav-link btn btn-primary create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">
-                            + New Project
+                            <i className="mdi mdi-account"></i> Contacto
                         </a>
 
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
-                            <h6 className="p-3 mb-0">Projects</h6>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item preview-item">
+
+                            <a className="dropdown-item preview-item" href="https://antoniolf.es/contacto" target="_blank">
                                 <div className="preview-thumbnail">
                                     <div className="preview-icon bg-dark rounded-circle">
-                                        <i className="mdi mdi-file-outline text-primary"></i>
+                                        <img src="assets/images/social-icons/email.svg" alt="Email" />
                                     </div>
                                 </div>
                                 <div className="preview-item-content">
-                                    <p className="preview-subject ellipsis mb-1">Software Development</p>
+                                    <p className="preview-subject ellipsis mb-1">Email</p>
                                 </div>
                             </a>
+
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item preview-item">
+                            <a className="dropdown-item preview-item" href="https://twitter.com/brolin79" target="_blank">
                                 <div className="preview-thumbnail">
                                     <div className="preview-icon bg-dark rounded-circle">
-                                        <i className="mdi mdi-web text-info"></i>
+                                        <img src="assets/images/social-icons/twitterx.svg" alt="Twitter-X" />
                                     </div>
                                 </div>
                                 <div className="preview-item-content">
-                                    <p className="preview-subject ellipsis mb-1">UI Development</p>
+                                    <p className="preview-subject ellipsis mb-1">Twitter-X</p>
                                 </div>
                             </a>
+
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item preview-item">
+                            <a className="dropdown-item preview-item" href="http://es.linkedin.com/pub/antonio-lopez-fernandez/49/956/39a" target="_blank">
                                 <div className="preview-thumbnail">
                                     <div className="preview-icon bg-dark rounded-circle">
-                                        <i className="mdi mdi-layers text-danger"></i>
+                                        <img src="assets/images/social-icons/linkedin.svg" alt="Linkedin" />
                                     </div>
                                 </div>
                                 <div className="preview-item-content">
-                                    <p className="preview-subject ellipsis mb-1">Software Testing</p>
+                                    <p className="preview-subject ellipsis mb-1">Linkedin</p>
                                 </div>
                             </a>
-                            <div className="dropdown-divider"></div>
-                            <p className="p-3 mb-0 text-center">See all projects</p>
+
+                            <a className="dropdown-item preview-item" href="https://github.com/brolin79" target="_blank">
+                                <div className="preview-thumbnail">
+                                    <div className="preview-icon bg-dark rounded-circle">
+                                        <img src="assets/images/social-icons/github.svg" alt="Github" />
+                                    </div>
+                                </div>
+                                <div className="preview-item-content">
+                                    <p className="preview-subject ellipsis mb-1">Github</p>
+                                </div>
+                            </a>
+
                         </div>
                     </li>
 
-                    <li className="nav-item dropdown border-left">
-                        <a className="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <i className="mdi mdi-email"></i>
-                        </a>
-                        
-                    </li>
-
-                    <li className="nav-item dropdown border-left">
-                        <a className="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                            <i className="mdi mdi-bell"></i>
-                        </a>
-                    </li>
-
                 </ul>
-                
+
                 <button className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                     <span className="mdi mdi-format-line-spacing"></span>
                 </button>
 
             </div>
-            
+
         </nav>
     )
 }
