@@ -1,6 +1,6 @@
 import { Card } from "../../components/ui";
 
-export const Weather = ({ data }) => {
+export const WeatherTool = ({ data }) => {
     return (
         <>
             {

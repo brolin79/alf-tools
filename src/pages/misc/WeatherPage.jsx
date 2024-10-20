@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
-import { Weather } from "../../components/tools/weather"
+import { WeatherTool } from "../../components/tools/Weather"
 import { MiscClass } from "../../classes/miscClass"
 
 
@@ -32,7 +32,7 @@ export const WeatherPage = () => {
             {
                 (data) ?
                     <div className="row">
-                        <Weather data={data} />
+                        <WeatherTool data={data} />
                     </div>
                 : null
             }
