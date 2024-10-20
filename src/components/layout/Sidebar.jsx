@@ -36,9 +36,10 @@ export const Sidebar = () => {
                     </a>
                     <div className="collapse" id="ui-basic">
                         <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="passwords">Contraseña / Uuid</a>
+                                <a className="nav-link" href="lorem-ipsum">Texto lorem ipsum</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -85,14 +86,14 @@ export const Sidebar = () => {
                     </div>
                 </li>
 
-                <li className="nav-item menu-items">
+                {/* <li className="nav-item menu-items">
                     <a className="nav-link" href="pages/charts/chartjs.html">
                         <span className="menu-icon">
                             <i className="mdi mdi-chart-bar"></i>
                         </span>
                         <span className="menu-title">Charts</span>
                     </a>
-                </li>
+                </li> */}
                 
             </ul>
         </nav>

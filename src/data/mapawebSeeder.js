@@ -1,5 +1,13 @@
 export const mapaweb = [
     {
+        "enlace": "passwords",
+        "tags": "password, contraseña, uuid, aleatorio"
+    },
+    {
+        "enlace": "lorem-ipsum",
+        "tags": "parrafo, texto, aleatorio, lorem, ipsum"
+    },
+    {
         "enlace": "emojis",
         "tags": "emojis, emoji, emoticonos, emoticon"
     },

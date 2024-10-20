@@ -9,7 +9,7 @@ export const Weather = ({ data }) => {
                     return (
                         <Card key={event.fecha} col="2">
                             <h4 className="text-center">
-                                {new Intl.DateTimeFormat('es-ES', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(event.fecha))}
+                                {new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'short' }).format(new Date(event.fecha)).replace(/de \d{4}/, '')}
                             </h4>
                             <p className="text-center">
                                 {
