@@ -28,9 +28,9 @@ export class MiscClass {
     };
 
 
-    async getWeather (search)  {
+    async getWeather (latitude, longitude)  {
 
-        const url = "/forecast?latitude=43.2957&longitude=-5.6842&hourly=temperature_2m,precipitation_probability";
+        const url = `forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,precipitation_probability`;
 
         try {
             const api = generateApi("weather");

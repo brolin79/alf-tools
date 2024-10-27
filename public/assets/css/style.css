@@ -11392,7 +11392,6 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #191c24;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -21124,3 +21123,51 @@ div.tagsinput {
   flex-grow: 1; }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+
+/* Modal */
+.ReactModalPortal > div{
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity .2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: #1A1C24;
+  border-radius: 5px;
+  color: #fafbfb;
+  display: inline;
+  max-height: 480px;
+  max-width: 640px;
+  outline: none;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.modal-title {
+  color: #4178BC;
+  margin-bottom: 5px;;
+}
