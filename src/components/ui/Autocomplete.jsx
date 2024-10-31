@@ -44,7 +44,7 @@ export const AutocompleteInput = ({
         <ul className="list-group position-absolute w-100 bg-dark text-white" style={{ zIndex: 1, maxWidth: '300px', maxHeight: '200px', overflowY: 'auto' }}>
           {filteredItems.map((item) => (
             <li
-              key={item[valueKey]}
+              key={item[valueKey]+item[displayKey]}
               className="list-group-item list-group-item-action text-white bg-dark"
               onClick={() => handleSelect(item)}
               style={{ cursor: 'pointer' }}

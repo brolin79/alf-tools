@@ -21171,3 +21171,7 @@ div.tagsinput {
   color: #4178BC;
   margin-bottom: 5px;;
 }
+
+.table th {
+  color: #4178BC !important;
+}

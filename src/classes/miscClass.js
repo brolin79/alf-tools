@@ -1,16 +1,16 @@
-import  generateApi  from "../api/generateApi";
+import generateApi from "../api/generateApi";
 import { envVars } from '../helpers/envVars';
 import { ErrorClass } from "./errorClass";
 
 
-const errorClass = new ErrorClass(); 
+const errorClass = new ErrorClass();
 
 export class MiscClass {
 
 
-    async countryInfo (search)  {
+    async countryInfo(search) {
 
-        const url = `/name/${ search }`;
+        const url = `/name/${search}`;
 
         try {
 
@@ -27,8 +27,35 @@ export class MiscClass {
 
     };
 
+    async airportInfo(search, type) {
 
-    async getWeather (latitude, longitude)  {
+        if (type === undefined) {
+            type = '';
+        }
+
+        const action = 'get_aeropuertos';
+        const { VITE_API_KEY_ALF } = envVars();
+        const url = `/alftools-api.php?action=${action}&apikey=${VITE_API_KEY_ALF}&type=${type}&search=${search}`;     
+    
+        try {
+
+            const status = 'ok';
+            const api = generateApi("alf");
+            const response = await api.get(url);
+            const datos = response.data.data;
+
+            return { status, datos };
+
+        } catch (error) {
+            console.log(error);
+            errorClass.sendError(error, "airportInfo");
+        }
+        
+
+    };
+
+
+    async getWeather(latitude, longitude) {
 
         const url = `forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,precipitation_probability`;
 
@@ -66,5 +93,5 @@ export class MiscClass {
         }
     }
 
-    
+
 }

@@ -23,7 +23,7 @@ export const Navbar = () => {
                     <span className="mdi mdi-menu"></span>
                 </button>
 
-                <ul className="navbar-nav w-100 mt-2">
+                <ul className="navbar-nav w-100 mt-1">
                     <li className="nav-item" style={{ maxWidth: "125px" }}>
                         <AutocompleteInput
                             placeholder="Buscar Tools"

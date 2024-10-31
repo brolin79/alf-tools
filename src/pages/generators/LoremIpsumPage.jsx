@@ -25,7 +25,7 @@ export const LoremIpsumPage = () => {
 
             <div className="row">
 
-                <div>
+                <div className="col-12">
                     <div className="mb-2 d-flex">
                         <label htmlFor="paragraphs" className="form-label">Parrafos: </label>
                         <input

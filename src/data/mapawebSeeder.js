@@ -22,5 +22,9 @@ export const mapaweb = [
     {
         "enlace": "paises",
         "tags": "paises, info, pais, country code, moneda, bandera"
+    },
+    {
+        "enlace": "aeropuertos",
+        "tags": "aeropuertos, avion, viaje, destino"
     }
 ];
