@@ -24,7 +24,7 @@ export const Navbar = () => {
                 </button>
 
                 <ul className="navbar-nav w-100 mt-2">
-                    <li className="nav-item" style={{ maxWidth: "165px" }}>
+                    <li className="nav-item" style={{ maxWidth: "125px" }}>
                         <AutocompleteInput
                             placeholder="Buscar Tools"
                             data={mapaweb}
