@@ -26,8 +26,8 @@ export const CountryPage = () => {
 
     // estados para el desplegable
     const handleSelect = async (pais) => {
-      const paisInfo = await miscClass.countryInfo(pais.name);
-      setInfoPais(paisInfo);
+        const paisInfo = await miscClass.countryInfo(pais.name);
+        setInfoPais(paisInfo);
     };
 
 
@@ -45,16 +45,20 @@ export const CountryPage = () => {
 
             <div className="row">
 
-                <AutocompleteInput
-                    placeholder="Escribe el nombre de un país"
-                    data={dataPaises}
-                    onSelect={handleSelect}
-                    displayKey="nombre"
-                    valueKey="name"
-                    filterFunction={(pais, value) =>
-                        pais.nombre.toLowerCase().includes(value.toLowerCase())
-                    }
-                />
+                <div className="col-xl-6 col-sm-12 mb-3">
+
+                    <AutocompleteInput
+                        placeholder="Escribe el nombre de un país"
+                        data={dataPaises}
+                        onSelect={handleSelect}
+                        displayKey="nombre"
+                        valueKey="name"
+                        filterFunction={(pais, value) =>
+                            pais.nombre.toLowerCase().includes(value.toLowerCase())
+                        }
+                    />
+
+                </div>
 
             </div>
 
@@ -67,10 +71,10 @@ export const CountryPage = () => {
 
                             <Card col="6" key={index}>
 
-                                <h3 className="text-center"> 
+                                <h3 className="text-center">
                                     {Object.values(info.name.nativeName).map((name, index) => (
                                         <span key={index}> {name.official} </span>
-                                    ))} 
+                                    ))}
                                 </h3>
                                 <p className="text-center"><img className="img-fluid" src={info.flags.png} /></p>
 
@@ -103,7 +107,7 @@ export const CountryPage = () => {
                                     <div className="col-6 col-xl-6">
                                         <p className="text-primary ml-2 mb-2">
                                             {Object.values(info.currencies).map((currency, index) => (
-                                            <span key={index}> | {currency.name} ({currency.symbol}) | </span>
+                                                <span key={index}> | {currency.name} ({currency.symbol}) | </span>
                                             ))}
                                         </p>
                                     </div>
@@ -121,7 +125,7 @@ export const CountryPage = () => {
                                         </p>
                                     </div>
                                 </div>
-                                
+
                                 <div className="row">
                                     <div className="col-6 col-xl-3">
                                         <h6 className="mb-2">Longitud / Latidud</h6>
@@ -145,7 +149,7 @@ export const CountryPage = () => {
                                         </p>
                                     </div>
                                 </div>
-                                
+
                             </Card>
 
                         ))

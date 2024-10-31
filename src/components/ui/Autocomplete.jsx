@@ -31,17 +31,17 @@ export const AutocompleteInput = ({
   };
 
   return (
-    <div className="form-group position-relative col-13 col-xl-6">
+    <>
       <input
         type="text"
         className="form-control"
         placeholder={placeholder}
         value={inputValue}
         onChange={handleInputChange}
-        style={{ borderRadius: '5px' }}
+        style={{ borderRadius: '5px', width: '100%' }}
       />
       {filteredItems.length > 0 && (
-        <ul className="list-group position-absolute w-100 bg-dark text-white" style={{ zIndex: 1, maxHeight: '200px', overflowY: 'auto' }}>
+        <ul className="list-group position-absolute w-100 bg-dark text-white" style={{ zIndex: 1, maxWidth: '300px', maxHeight: '200px', overflowY: 'auto' }}>
           {filteredItems.map((item) => (
             <li
               key={item[valueKey]}
@@ -54,7 +54,7 @@ export const AutocompleteInput = ({
           ))}
         </ul>
       )}
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,6 @@ export const Navbar = () => {
 
 
     const handleSelect = async (mapaweb) => {
-        //redirect
         window.location.href = `${mapaweb.enlace}`;
     };
 
@@ -24,8 +23,8 @@ export const Navbar = () => {
                     <span className="mdi mdi-menu"></span>
                 </button>
 
-                <ul className="navbar-nav w-100 mt-3">
-                    <li className="nav-item w-100 mt-4 mt-md-0 d-none d-lg-flex search">
+                <ul className="navbar-nav w-100 mt-2">
+                    <li className="nav-item" style={{ maxWidth: "165px" }}>
                         <AutocompleteInput
                             placeholder="Buscar Tools"
                             data={mapaweb}
@@ -43,7 +42,7 @@ export const Navbar = () => {
                     <li className="nav-item dropdown d-lg-block">
 
                         <a className="nav-link btn btn-primary create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">
-                            <i className="mdi mdi-account"></i> Contacto
+                            <i className="mdi mdi-account"></i> <span className="d-none d-md-inline"> Contacto</span>
                         </a>
 
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
