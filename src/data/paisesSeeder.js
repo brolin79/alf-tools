@@ -307,7 +307,7 @@ export const paises = [
     {
         "nombre": "Escocia",
         "name": "Scotland",
-        "iso": "GB"
+        "iso": "SCT"
     },
     {
         "nombre": "Eslovaquia",
@@ -367,7 +367,7 @@ export const paises = [
     {
         "nombre": "Gales",
         "name": "Wales",
-        "iso": "GB"
+        "iso": "WLS"
     },
     {
         "nombre": "Gambia",
@@ -502,7 +502,7 @@ export const paises = [
     {
         "nombre": "Irlanda del Norte",
         "name": "Northern Irland",
-        "iso": "GB"
+        "iso": "NIR"
     },
     {
         "nombre": "Isla Bouvet",

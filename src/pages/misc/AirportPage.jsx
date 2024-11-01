@@ -43,7 +43,7 @@ export const AirportPage = () => {
 
         const { iata } = formValues;
 
-        if (iata.trim().length < 2) return;
+        if (iata.trim().length < 2 && (infoPais.iso == '' || infoPais.iso == undefined)) return;
 
         const info = await miscClass.airportInfo(iata, infoPais.iso);
         if (info) {
@@ -123,7 +123,7 @@ export const AirportPage = () => {
                                 <tr>
                                     <th>Iata</th>
                                     <th>Nombre</th>
-                                    <th>Cod. Pais</th>
+                                    <th>Pais</th>
                                     <th>Ciudad</th>
                                     <th>Mapa</th>
                                 </tr>
@@ -134,7 +134,7 @@ export const AirportPage = () => {
                                         <tr key={index}>
                                             <td>{info.iata}</td>
                                             <td>{info.nombre}</td>
-                                            <td>{info.countrycode}</td>
+                                            <td>{info.pais}</td>
                                             <td>{info.ciudad}</td>
                                             <td>
                                                 <a href={`https://www.google.com/maps/search/?api=1&query=${info.latitud},${info.longitud}`} target="_blank">
