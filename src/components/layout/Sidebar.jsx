@@ -91,14 +91,25 @@ export const Sidebar = () => {
                     </div>
                 </li>
 
-                {/* <li className="nav-item menu-items">
-                    <a className="nav-link" href="pages/charts/chartjs.html">
+                <li className="nav-item menu-items">
+                    <a className="nav-link" data-toggle="collapse" href="#sub-web" aria-expanded="false" aria-controls="sub-web">
                         <span className="menu-icon">
-                            <i className="mdi mdi-chart-bar"></i>
+                            <i className="mdi mdi mdi-web"></i>
                         </span>
-                        <span className="menu-title">Charts</span>
+                        <span className="menu-title">Web</span>
+                        <i className="menu-arrow"></i>
                     </a>
-                </li> */}
+                    <div className="collapse" id="sub-web">
+                        <ul className="nav flex-column sub-menu">
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="url-vars">Url vars</a>
+                            </li>
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="ip-info">IP info</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 
             </ul>
         </nav>
