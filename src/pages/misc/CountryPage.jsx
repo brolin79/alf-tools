@@ -10,7 +10,6 @@ export const CountryPage = () => {
 
     const miscClass = new MiscClass();
 
-
     // datos iniciales
     const [dataPaises, setDataPaises] = useState([]);
     const [infoPais, setInfoPais] = useState([]);

@@ -9,14 +9,15 @@ export const GifsPage = () => {
 
     const imagesClass = new ImagesClass();
 
-    const [formValues, setFormValues] = useState({
-        name: '',
-    });
-
+    // datos iniciales
     const [gif, setGif] = useState([]);
     const [error, setError] = useState(false);
 
-
+    // formulario
+    const [formValues, setFormValues] = useState({
+        name: '',
+    });
+    
     const onInputChange = (e) => {
         setFormValues({
             ...formValues,

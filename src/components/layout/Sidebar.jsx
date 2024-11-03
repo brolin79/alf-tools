@@ -94,7 +94,7 @@ export const Sidebar = () => {
                 <li className="nav-item menu-items">
                     <a className="nav-link" data-toggle="collapse" href="#sub-web" aria-expanded="false" aria-controls="sub-web">
                         <span className="menu-icon">
-                            <i className="mdi mdi mdi-web"></i>
+                            <i className="mdi mdi-web"></i>
                         </span>
                         <span className="menu-title">Web</span>
                         <i className="menu-arrow"></i>

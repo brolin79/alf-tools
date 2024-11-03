@@ -7,7 +7,7 @@ const errorClass = new ErrorClass();
 
 export class ImagesClass {
 
-
+    // llama a api de emojis para recoger los valores de busqueda
     async searchEmojis (search)  {
 
         const { VITE_API_KEY_EMOJIS } = envVars();
@@ -28,7 +28,7 @@ export class ImagesClass {
 
     };
 
-
+    // llama a api de gifs para recoger los valores de busqueda
     async searchGifs (search)  {
 
         const { VITE_API_KEY_GIFS } = envVars();

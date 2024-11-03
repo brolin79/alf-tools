@@ -10,13 +10,14 @@ export const EmojisPage = () => {
 
     const imagesClass = new ImagesClass();
 
-    const [formValues, setFormValues] = useState({
-        name: '',
-    });
-
+    // datos iniciales
     const [emojis, setEmojis] = useState([]);
     const [error, setError] = useState(false);
 
+    // formulario
+    const [formValues, setFormValues] = useState({
+        name: '',
+    });
 
     const onInputChange = (e) => {
         setFormValues({

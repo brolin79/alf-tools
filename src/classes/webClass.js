@@ -7,7 +7,7 @@ const errorClass = new ErrorClass();
 
 export class WebClass {
 
-
+    // llama a api de ip para recoger los valores de busqueda
     async ipInfo(ip, type) {
 
         try {

@@ -4,6 +4,7 @@ import { envVars } from '../helpers/envVars';
 
 export class ErrorClass {
 
+    // envia por post el error para guardar en la bbdd
     async sendError (error, funcion) { 
 
         const { VITE_API_KEY_ALF } = envVars();

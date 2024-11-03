@@ -9,12 +9,11 @@ export const UrlVarsPage = () => {
     const [info, setInfo] = useState(false);
     const [urlVars, setUrlVars] = useState([]);
 
-
+    // formulario
     const [formValues, setFormValues] = useState({
         url: ''
     });
 
-    
     const onInputChange = (e) => {
         setFormValues({
             ...formValues,

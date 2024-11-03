@@ -23,7 +23,7 @@ export const IpInfoPage = () => {
             })
     }, []);
 
-
+    // formulario
     const [formValues, setFormValues] = useState({
         ip: ''
     });
@@ -52,8 +52,6 @@ export const IpInfoPage = () => {
                     setIpInfo(response);
             })
         }
-
-
     }
 
 

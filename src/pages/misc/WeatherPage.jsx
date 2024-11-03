@@ -23,10 +23,6 @@ export const WeatherPage = () => {
     const [ciudadActual, setCiudadActual] = useState("Langreo");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const [formValues, setFormValues] = useState({
-        search: '',
-        ciudad: '',
-    });
 
     useEffect(() => {
         // langreo por defecto
@@ -34,6 +30,7 @@ export const WeatherPage = () => {
             .then(data => setData(data))
     }, []);
 
+    // modal
     const onCloseModal = () => {
         setIsModalOpen(false);
     }
@@ -41,13 +38,6 @@ export const WeatherPage = () => {
     const openModal = () => {
         setIsModalOpen(true);
     }
-
-    const onInputChange = (e) => {
-        setFormValues({
-            ...formValues,
-            [e.target.name]: e.target.value
-        })
-    };
 
     const onSearch = (e) => {
         e.preventDefault();
@@ -70,6 +60,19 @@ export const WeatherPage = () => {
                 setError(true);
             });
     }
+
+    // formulario modal
+    const [formValues, setFormValues] = useState({
+        search: '',
+        ciudad: '',
+    });
+
+    const onInputChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    };
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -107,7 +110,6 @@ export const WeatherPage = () => {
                     : null
             }
 
-
             <Modal
                 isOpen={isModalOpen}
                 onRequestClose={onCloseModal}
@@ -133,7 +135,6 @@ export const WeatherPage = () => {
                     />
                 </form>
 
-
                 <div className="mt-4">
 
                     {
@@ -158,7 +159,6 @@ export const WeatherPage = () => {
 
                     }
 
-
                     {modalButton &&
                         <button onClick={onSubmit} className="btn btn-primary mt-2" style={{ width: '100%' }}>
                             <i className="mdi mdi-content-save-all"></i>
@@ -167,7 +167,6 @@ export const WeatherPage = () => {
                     }
 
                 </div>
-
 
             </Modal>
 

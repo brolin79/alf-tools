@@ -26,5 +26,13 @@ export const mapaweb = [
     {
         "enlace": "aeropuertos",
         "tags": "aeropuertos, avion, viaje, destino"
+    },
+    {
+        "enlace": "url-vars",
+        "tags": "url, variables, parametros, url-vars, valores"
+    },
+    {
+        "enlace": "ip-info",
+        "tags": "ip, informacion, ip-info, address, ipv4"
     }
 ];

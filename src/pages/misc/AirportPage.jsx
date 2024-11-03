@@ -10,17 +10,12 @@ export const AirportPage = () => {
 
     const miscClass = new MiscClass();
 
-
     // datos iniciales
     const [dataPaises, setDataPaises] = useState([]);
     const [infoPais, setInfoPais] = useState('');
     const [infoIata, setInfoIata] = useState([]);
     const [infoData, setInfoData] = useState(false);
 
-
-    const [formValues, setFormValues] = useState({
-        iata: ''
-    });
 
     useEffect(() => {
         if (paises) {
@@ -30,6 +25,10 @@ export const AirportPage = () => {
         }
     }, []);
 
+    // formulario
+    const [formValues, setFormValues] = useState({
+        iata: ''
+    });
     
     const onInputChange = (e) => {
         setFormValues({

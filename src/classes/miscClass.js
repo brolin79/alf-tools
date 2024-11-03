@@ -7,7 +7,7 @@ const errorClass = new ErrorClass();
 
 export class MiscClass {
 
-
+    // llama a api de paises para recoger los valores de busqueda
     async countryInfo(search) {
 
         const url = `/name/${search}`;
@@ -27,6 +27,7 @@ export class MiscClass {
 
     };
 
+    // llama a api-bbdd de aeropuertos para recoger los valores de busqueda
     async airportInfo(search, type) {
 
         if (type === undefined) {
@@ -54,7 +55,7 @@ export class MiscClass {
 
     };
 
-
+    // llama a api de clima para recoger los valores de busqueda y los adecua
     async getWeather(latitude, longitude) {
 
         const url = `forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,precipitation_probability`;

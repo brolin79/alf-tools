@@ -7,7 +7,7 @@ const errorClass = new ErrorClass();
 
 export class AlfClass {
 
-    
+    // Recoger datos de novedades de api-bbdd
     async getNovedades ()  {
 
         const action = 'get_novedades';
@@ -30,6 +30,7 @@ export class AlfClass {
         }
     };
 
+    // Recoger datos de ciudades de api-bbdd
     async getCiudadesMundo (search)  {
 
         const action = 'get_ciudades_mundo';

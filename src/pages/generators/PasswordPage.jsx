@@ -6,6 +6,7 @@ import { Tooltip } from 'react-tooltip';
 
 export const PasswordPage = () => {
 
+    // datos iniciales
     const [token, setToken] = useState('');
     const [uppercase, setUppercase] = useState(false);
     const [lowercase, setLowercase] = useState(true);
@@ -13,6 +14,7 @@ export const PasswordPage = () => {
     const [symbols, setSymbols] = useState(false);
     const [length, setLength] = useState(64);
 
+    // funciones
     const generateToken = () => {
         const characters = [];
         if (uppercase) characters.push(...'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
