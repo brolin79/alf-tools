@@ -11,6 +11,7 @@ import { GifsPage } from "../pages/images/GifsPage";
 import { WeatherPage } from "../pages/misc/WeatherPage";
 import { CountryPage } from "../pages/misc/CountryPage";
 import { AirportPage } from "../pages/misc/AirportPage";
+import { TranslationPage } from "../pages/misc/TranslationPage";
 
 import { UrlVarsPage } from "../pages/web/UrlVarsPage";
 import { IpInfoPage } from "../pages/web/IpInfoPage";
@@ -33,6 +34,7 @@ export const AlfRouter = () => {
             <Route path="/weather" element={ <WeatherPage /> } />
             <Route path="/paises" element={ <CountryPage /> } />
             <Route path="/aeropuertos" element={ <AirportPage /> } />
+            <Route path="/traductor" element={ <TranslationPage /> } />
             {/* Web */}
             <Route path="/url-vars" element={ <UrlVarsPage /> } />
             <Route path="/ip-info" element={ <IpInfoPage /> } />

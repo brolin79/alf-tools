@@ -51,7 +51,6 @@ export class MiscClass {
             console.log(error);
             errorClass.sendError(error, "airportInfo");
         }
-        
 
     };
 
@@ -93,6 +92,37 @@ export class MiscClass {
             errorClass.sendError(error, "getWeather");
         }
     }
+    
+    // llama a api de deepl para traducir un texto
+    async deepl(source, target, text) {
 
+        const { VITE_API_KEY_DEEPL } = envVars();
+        const url = `/translate`;
+
+        const data = {
+            text: text,
+            source_lang: source,
+            target_lang: target
+        };
+
+        const headers = {
+            'Authorization': `DeepL-Auth-Key ${VITE_API_KEY_DEEPL}`,
+            'Content-Type': 'application/x-www-form-urlencoded'
+        };
+
+        try {
+
+            const api = generateApi("deepl");
+            const response = await api.post(url, data, { headers });
+            const resultado = response.data;
+
+            return resultado;
+
+        } catch (error) {
+            console.log(error);
+            errorClass.sendError(error, "deepl");
+        }
+
+    };
 
 }
