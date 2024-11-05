@@ -34,5 +34,9 @@ export const mapaweb = [
     {
         "enlace": "ip-info",
         "tags": "ip, informacion, ip-info, address, ipv4"
+    },
+    {
+        "enlace": "color-picker",
+        "tags": "color, picker, selector, color-picker, rgb, hex"
     }
 ];

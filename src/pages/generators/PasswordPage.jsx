@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { Card, CardLight } from '../../components/ui';
-import { Tooltip } from 'react-tooltip';
+
+import { CopyForm } from '../../components/uiForms/CopyForm';
 
 
 export const PasswordPage = () => {
@@ -119,16 +120,9 @@ export const PasswordPage = () => {
                     <button className="btn btn-secondary ml-3" onClick={generateUUID}>Generar UUID</button>
                 </div>
 
-                <div className="input-group col-xl-12 col-sm-12 mt-4">
-                    <input className="form-control text-center" type="text" value={token} readOnly />
-                    <div className="input-group-append">
-                        <button className="btn btn-sm btn-primary anchor-tooltip" type="button" onClick={() => navigator.clipboard.writeText(token)}>
-                            <i className="mdi mdi-content-copy"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <Tooltip anchorSelect=".anchor-tooltip" style={{ backgroundColor: '#4178BC' }} content={"Copiado al portapapeles"} events={["click"]} />
+                
+                <CopyForm value={token} />
+                
 
             </div>
 

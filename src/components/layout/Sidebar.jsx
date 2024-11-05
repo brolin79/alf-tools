@@ -107,6 +107,9 @@ export const Sidebar = () => {
                             <li className="nav-item"> 
                                 <a className="nav-link" href="ip-info">IP info</a>
                             </li>
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="color-picker">Color Picker</a>
+                            </li>
                         </ul>
                     </div>
                 </li>

@@ -14,6 +14,7 @@ import { AirportPage } from "../pages/misc/AirportPage";
 
 import { UrlVarsPage } from "../pages/web/UrlVarsPage";
 import { IpInfoPage } from "../pages/web/IpInfoPage";
+import { ColorPickerPage } from "../pages/web/colorPicker";
 
 
 export const AlfRouter = () => {
@@ -35,6 +36,7 @@ export const AlfRouter = () => {
             {/* Web */}
             <Route path="/url-vars" element={ <UrlVarsPage /> } />
             <Route path="/ip-info" element={ <IpInfoPage /> } />
+            <Route path="/color-picker" element={ <ColorPickerPage /> } />
             {/* Ruta por defecto */}
             <Route path="/*" element={ <Navigate to="/" /> } />
 
