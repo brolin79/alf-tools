@@ -97,13 +97,14 @@ export class MiscClass {
     async deepl(source, target, text) {
 
         const { VITE_API_KEY_DEEPL } = envVars();
-        const url = `/translate`;
+        //const url = `/translate`;
+        const url = `/usage`;
 
-        const data = {
-            text: text,
-            source_lang: source,
-            target_lang: target
-        };
+        // const data = {
+        //     text: text,
+        //     source_lang: source,
+        //     target_lang: target
+        // };
 
         const headers = {
             'Authorization': `DeepL-Auth-Key ${VITE_API_KEY_DEEPL}`,
@@ -113,10 +114,10 @@ export class MiscClass {
         try {
 
             const api = generateApi("deepl");
-            const response = await api.post(url, data, { headers });
-            const resultado = response.data;
-
-            return resultado;
+            const response = await api.get(url, { headers });
+            const datos = response.data.data;
+            
+            return datos;
 
         } catch (error) {
             console.log(error);
