@@ -30,12 +30,6 @@ const generateApi = (api) => {
     const apiObject = apiUrls.find(apiObject => apiObject.api === api);
     apiUrl = apiObject ? apiObject.url : VITE_API_URL_ALF;
 
-    axios.defaults.proxy = {
-        host: 'localhost',
-        port: 8080,
-    };
-    axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-
     return axios.create({
         baseURL: apiUrl
     });
