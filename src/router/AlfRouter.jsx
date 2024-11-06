@@ -15,7 +15,7 @@ import { TranslationPage } from "../pages/misc/TranslationPage";
 
 import { UrlVarsPage } from "../pages/web/UrlVarsPage";
 import { IpInfoPage } from "../pages/web/IpInfoPage";
-import { ColorPickerPage } from "../pages/web/colorPicker";
+import { ColorPickerPage } from "../pages/web/ColorPicker";
 
 
 export const AlfRouter = () => {
