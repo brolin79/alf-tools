@@ -38,5 +38,9 @@ export const mapaweb = [
     {
         "enlace": "color-picker",
         "tags": "color, picker, selector, color-picker, rgb, hex"
+    },
+    {
+        "enlace": "traductor",
+        "tags": "traductor, deepl, translation, idioma, traduccion"
     }
 ];

@@ -88,11 +88,11 @@ export const Sidebar = () => {
                                 <a className="nav-link" href="aeropuertos">Aeropuertos</a>
                             </li>
                         </ul>
-                        {/* <ul className="nav flex-column sub-menu">
+                        <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
                                 <a className="nav-link" href="traductor">Traductor</a>
                             </li>
-                        </ul> */}
+                        </ul>
                     </div>
                 </li>
 

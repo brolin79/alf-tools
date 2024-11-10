@@ -96,28 +96,22 @@ export class MiscClass {
     // llama a api de deepl para traducir un texto
     async deepl(source, target, text) {
 
-        const { VITE_API_KEY_DEEPL } = envVars();
-        //const url = `/translate`;
-        const url = `/usage`;
-
-        // const data = {
-        //     text: text,
-        //     source_lang: source,
-        //     target_lang: target
-        // };
-
-        const headers = {
-            'Authorization': `DeepL-Auth-Key ${VITE_API_KEY_DEEPL}`,
-            'Content-Type': 'application/x-www-form-urlencoded'
-        };
+        const { VITE_API_KEY_ALF } = envVars();
+        const url = `/alftools-api.php`;
+        const action = 'traduccion';
 
         try {
 
-            const api = generateApi("deepl");
-            const response = await api.get(url, { headers });
-            const datos = response.data.data;
+            const api = generateApi("alf");
+            const response = await api.post(url, {
+                action: action,
+                apikey: VITE_API_KEY_ALF,
+                source_lang: source,
+                target_lang: target,
+                text: text
+            });
             
-            return datos;
+            return response.data;
 
         } catch (error) {
             console.log(error);
