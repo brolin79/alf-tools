@@ -37,8 +37,8 @@ export const Sidebar = () => {
                     <div className="collapse" id="ui-basic">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="passwords">Contraseña / Uuid</a>
-                                <a className="nav-link" href="lorem-ipsum">Texto lorem ipsum</a>
+                                <a className="nav-link" href="passwords">🔐 Contraseña / Uuid</a>
+                                <a className="nav-link" href="lorem-ipsum">📝 Lorem ipsum</a>
                             </li>
                         </ul>
                     </div>
@@ -55,10 +55,13 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-imagenes">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="emojis">Emojis</a>
+                                <a className="nav-link" href="emojis">😍 Emojis</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="gifs">Gifs</a>
+                                <a className="nav-link" href="gifs">🤹🏿‍♀️ Gifs</a>
+                            </li>
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="imagen">🖼️ Imagen</a>
                             </li>
                         </ul>
                     </div>
@@ -75,22 +78,22 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-misc">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="weather">Weather</a>
+                                <a className="nav-link" href="weather">🌞 Weather</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="paises">Paises</a>
+                                <a className="nav-link" href="paises">🏴‍☠️ Paises</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="aeropuertos">Aeropuertos</a>
+                                <a className="nav-link" href="aeropuertos">✈️ Aeropuertos</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="traductor">Traductor</a>
+                                <a className="nav-link" href="traductor">🌍 Traductor</a>
                             </li>
                         </ul>
                     </div>
@@ -107,13 +110,13 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-web">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="url-vars">Url vars</a>
+                                <a className="nav-link" href="url-vars">🧲 Url vars</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="ip-info">IP info</a>
+                                <a className="nav-link" href="ip-info">🌐 IP info</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="color-picker">Color Picker</a>
+                                <a className="nav-link" href="color-picker">🎨 Color Picker</a>
                             </li>
                         </ul>
                     </div>
