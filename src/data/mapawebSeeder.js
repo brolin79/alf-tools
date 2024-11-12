@@ -16,6 +16,10 @@ export const mapaweb = [
         "tags": "gif, gifs, imagenes, divertido"
     },
     {
+        "enlace": "imagen",
+        "tags": "imagen, aleatorias, foto, wallpaper, fondo, cuadro"
+    },
+    {
         "enlace": "weather",
         "tags": "tiempo, prevision, weather, lluvia, sol"
     },
