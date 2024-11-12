@@ -7,7 +7,7 @@ import { LoremIpsumPage } from "../pages/generators/LoremIpsumPage";
 
 import { EmojisPage } from "../pages/images/EmojisPage";
 import { GifsPage } from "../pages/images/GifsPage";
-// import { PicturesPages } from "../pages/images/PicturesPages";
+import { PicturesPages } from "../pages/images/PicturesPages";
 
 import { WeatherPage } from "../pages/misc/WeatherPage";
 import { CountryPage } from "../pages/misc/CountryPage";
@@ -31,7 +31,7 @@ export const AlfRouter = () => {
             {/* Imagenes */}
             <Route path="/emojis" element={<EmojisPage />} />
             <Route path="/gifs" element={<GifsPage />} />
-            {/* <Route path="/imagen" element={<PicturesPages />} /> */}
+            <Route path="/imagen" element={<PicturesPages />} />
             {/* Miscelanea */}
             <Route path="/weather" element={ <WeatherPage /> } />
             <Route path="/paises" element={ <CountryPage /> } />

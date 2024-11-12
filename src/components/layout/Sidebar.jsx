@@ -60,9 +60,9 @@ export const Sidebar = () => {
                             <li className="nav-item"> 
                                 <a className="nav-link" href="gifs">🤹🏿‍♀️ Gifs</a>
                             </li>
-                            {/* <li className="nav-item"> 
+                            <li className="nav-item"> 
                                 <a className="nav-link" href="imagen">🖼️ Imagen</a>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                 </li>
