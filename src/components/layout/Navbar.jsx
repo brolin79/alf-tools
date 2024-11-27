@@ -59,18 +59,6 @@ export const Navbar = () => {
                             </a>
 
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item preview-item" href="https://twitter.com/brolin79" target="_blank">
-                                <div className="preview-thumbnail">
-                                    <div className="preview-icon bg-dark rounded-circle">
-                                        <img src="assets/images/social-icons/twitterx.svg" alt="Twitter-X" />
-                                    </div>
-                                </div>
-                                <div className="preview-item-content">
-                                    <p className="preview-subject ellipsis mb-1">Twitter-X</p>
-                                </div>
-                            </a>
-
-                            <div className="dropdown-divider"></div>
                             <a className="dropdown-item preview-item" href="http://es.linkedin.com/pub/antonio-lopez-fernandez/49/956/39a" target="_blank">
                                 <div className="preview-thumbnail">
                                     <div className="preview-icon bg-dark rounded-circle">
