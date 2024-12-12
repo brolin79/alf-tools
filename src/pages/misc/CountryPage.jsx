@@ -3,7 +3,7 @@ import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
 import { paises } from "../../data/paisesSeeder"
 import { MiscClass } from "../../classes/miscClass"
-import { AutocompleteInput } from "../../components/ui/Autocomplete"
+import { AutocompleteInput } from "../../components/ui"
 
 
 export const CountryPage = () => {
@@ -48,6 +48,7 @@ export const CountryPage = () => {
 
                     <AutocompleteInput
                         placeholder="Escribe el nombre de un país"
+                        name="country"
                         data={dataPaises}
                         onSelect={handleSelect}
                         displayKey="nombre"

@@ -50,5 +50,9 @@ export const mapaweb = [
     {
         "enlace": "traductor",
         "tags": "traductor, deepl, translation, idioma, traduccion"
+    },
+    {
+        "enlace": "monedas",
+        "tags": "monedas, divisas, convertir, euro, dolar, peso"
     }
 ];

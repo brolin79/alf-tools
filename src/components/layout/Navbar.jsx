@@ -1,4 +1,4 @@
-import { AutocompleteInput } from "../ui/Autocomplete"
+import { AutocompleteInput } from "../ui"
 import { mapaweb } from "../../data/mapawebSeeder";
 
 
@@ -27,6 +27,7 @@ export const Navbar = () => {
                     <li className="nav-item" style={{ maxWidth: "125px" }}>
                         <AutocompleteInput
                             placeholder="Buscar Tools"
+                            name="mapaweb"
                             data={mapaweb}
                             onSelect={handleSelect}
                             displayKey="enlace"

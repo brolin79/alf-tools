@@ -36,8 +36,8 @@ export class MiscClass {
 
         const action = 'get_aeropuertos';
         const { VITE_API_KEY_ALF } = envVars();
-        const url = `/alftools-api.php?action=${action}&apikey=${VITE_API_KEY_ALF}&type=${type}&search=${search}`;     
-    
+        const url = `/alftools-api.php?action=${action}&apikey=${VITE_API_KEY_ALF}&type=${type}&search=${search}`;
+
         try {
 
             const status = 'ok';
@@ -92,7 +92,7 @@ export class MiscClass {
             errorClass.sendError(error, "getWeather");
         }
     }
-    
+
     // llama a api de deepl para traducir un texto
     async deepl(source, target, text) {
 
@@ -110,12 +110,32 @@ export class MiscClass {
                 target_lang: target,
                 text: text
             });
-            
+
             return response.data;
 
         } catch (error) {
             console.log(error);
             errorClass.sendError(error, "deepl");
+        }
+
+    };
+
+    // llama a api de monedas para recoger los valores de busqueda
+    async currency(search) {
+
+        const url = `/latest/${search}`;
+
+        try {
+
+            const api = generateApi("currency");
+            const response = await api.get(url);
+            const resultado = response.data;
+
+            return resultado;
+
+        } catch (error) {
+            console.log(error);
+            errorClass.sendError(error, "currency");
         }
 
     };

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 export const AutocompleteInput = ({ 
-  placeholder, 
+  placeholder,
+  name, 
   data, 
   onSelect, 
   displayKey, 
@@ -37,6 +38,7 @@ export const AutocompleteInput = ({
         className="form-control"
         placeholder={placeholder}
         value={inputValue}
+        name={name}
         onChange={handleInputChange}
         style={{ borderRadius: '5px', width: '100%' }}
       />

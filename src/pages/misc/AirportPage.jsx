@@ -3,7 +3,7 @@ import { MainLayout } from "../../components/layout/MainLayout"
 import { Card, CardLight } from "../../components/ui"
 import { paises } from "../../data/paisesSeeder"
 import { MiscClass } from "../../classes/miscClass"
-import { AutocompleteInput } from "../../components/ui/Autocomplete"
+import { AutocompleteInput } from "../../components/ui"
 
 
 export const AirportPage = () => {
@@ -87,6 +87,7 @@ export const AirportPage = () => {
 
                     <AutocompleteInput
                         placeholder="Filtrar por pais"
+                        name="iso"
                         data={dataPaises}
                         onSelect={handleSelect}
                         displayKey="nombre"
