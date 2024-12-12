@@ -45,12 +45,12 @@ export const ColorPickerPage = () => {
 
                 <div className="col-xl-4 col-sm-12 mt-3">
                     <span className="text-primary ml-2">HEX:</span>
-                    <CopyForm value={colorHex} />
+                    <CopyForm value={colorHex} name="colorHex" />
                 </div>
 
                 <div className="col-xl-4 col-sm-12 mt-3">
                     <span className="text-primary ml-2">RGB:</span>
-                    <CopyForm value={colorRgb} />
+                    <CopyForm value={colorRgb} name="colorRgb" />
                 </div>
             </div>
 

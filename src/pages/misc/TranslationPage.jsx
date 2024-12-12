@@ -46,6 +46,13 @@ export const TranslationPage = () => {
         }
     }
 
+    const onTransfer = () => {
+        setFormValues({
+            ...formValues,
+            source_lang: formValues.target_lang,
+            target_lang: formValues.source_lang
+        })
+    }
 
     return (
 
@@ -61,7 +68,7 @@ export const TranslationPage = () => {
 
             <div className="row">
 
-                <div className="col-xl-6 col-sm-12 mb-3">
+                <div className="col-xl-5 col-sm-12 mb-3">
 
                     <select
                         className="form-control mb-3"
@@ -94,7 +101,13 @@ export const TranslationPage = () => {
 
                 </div>
 
-                <div className="col-xl-6 col-sm-12 mb-3">
+                <div className="col-xl-1 col-sm-12 d-flex justify-content-center align-items-start mb-3">
+                    <button type="button" className="btn btn-link mt-0" onClick={onTransfer}>
+                        <i className="mdi mdi-swap-horizontal"></i>
+                    </button>
+                </div>
+
+                <div className="col-xl-5 col-sm-12 mb-3">
 
                     <select
                         className="form-control mb-3"
@@ -125,14 +138,13 @@ export const TranslationPage = () => {
 
                 </div>
 
-                {loading && <Spinner />}
-
-                <div className="col-xl-6 col-sm-12 mb-3">
+                <div className="col-xl-1 col-sm-12 d-flex justify-content-center align-items-center mb-3">
                     <button className="btn btn-primary" onClick={onSubmit}>Traducir</button>
                 </div>
 
             </div>
 
+            {loading && <Spinner />}
 
         </MainLayout >
     )

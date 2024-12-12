@@ -121,7 +121,7 @@ export const PasswordPage = () => {
                 </div>
 
                 
-                <CopyForm value={token} />
+                <CopyForm value={token} name="token" />
                 
 
             </div>

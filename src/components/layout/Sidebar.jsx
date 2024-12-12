@@ -39,6 +39,7 @@ export const Sidebar = () => {
                             <li className="nav-item"> 
                                 <a className="nav-link" href="passwords">🔐 Contraseña / Uuid</a>
                                 <a className="nav-link" href="lorem-ipsum">📝 Lorem ipsum</a>
+                                <a className="nav-link" href="convertir-texto">🔠 Convertir Texto</a>
                             </li>
                         </ul>
                     </div>

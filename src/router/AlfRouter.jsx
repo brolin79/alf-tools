@@ -4,6 +4,7 @@ import { HomePage } from "../pages/HomePage";
 
 import { PasswordPage } from "../pages/generators/PasswordPage";
 import { LoremIpsumPage } from "../pages/generators/LoremIpsumPage";
+import { CaseConverterPage } from "../pages/generators/CaseConverterPage";
 
 import { EmojisPage } from "../pages/images/EmojisPage";
 import { GifsPage } from "../pages/images/GifsPage";
@@ -28,6 +29,7 @@ export const AlfRouter = () => {
             {/* Generadores */}
             <Route path="/passwords" element={<PasswordPage />} />
             <Route path="/lorem-ipsum" element={<LoremIpsumPage />} />
+            <Route path="/convertir-texto" element={<CaseConverterPage />} />
             {/* Imagenes */}
             <Route path="/emojis" element={<EmojisPage />} />
             <Route path="/gifs" element={<GifsPage />} />

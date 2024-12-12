@@ -8,6 +8,10 @@ export const mapaweb = [
         "tags": "parrafo, texto, aleatorio, lorem, ipsum"
     },
     {
+        "enlace": "convertir-texto",
+        "tags": "convertir, texto, mayusculas, minusculas, camelcase"
+    },
+    {
         "enlace": "emojis",
         "tags": "emojis, emoji, emoticonos, emoticon"
     },
