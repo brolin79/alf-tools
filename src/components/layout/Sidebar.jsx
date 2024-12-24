@@ -37,9 +37,9 @@ export const Sidebar = () => {
                     <div className="collapse" id="ui-basic">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="passwords">🔐 Contraseña / Uuid</a>
-                                <a className="nav-link" href="lorem-ipsum">📝 Lorem ipsum</a>
-                                <a className="nav-link" href="convertir-texto">🔠 Convertir Texto</a>
+                                <a className="nav-link" href="passwords" title="Genera contraseñas">🔐 Contraseña / Uuid</a>
+                                <a className="nav-link" href="lorem-ipsum" title="Genera Lorem ipsum">📝 Lorem ipsum</a>
+                                <a className="nav-link" href="convertir-texto" title="Convertir texto">🔠 Convertir Texto</a>
                             </li>
                         </ul>
                     </div>
@@ -56,13 +56,13 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-imagenes">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="emojis">😍 Emojis</a>
+                                <a className="nav-link" href="emojis" title="Busca emojis">😍 Emojis</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="gifs">🤹🏿‍♀️ Gifs</a>
+                                <a className="nav-link" href="gifs" title="Busca gifs">🤹🏿‍♀️ Gifs</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="imagen">🖼️ Imagen</a>
+                                <a className="nav-link" href="imagen" title="Busca imagenes">🖼️ Imagen</a>
                             </li>
                         </ul>
                     </div>
@@ -79,27 +79,32 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-misc">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="weather">🌞 Weather</a>
+                                <a className="nav-link" href="weather" title="Tiempo">🌞 Tiempo</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="paises">🏴‍☠️ Paises</a>
+                                <a className="nav-link" href="paises" title="Info Paises">🏴‍☠️ Paises</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="aeropuertos">✈️ Aeropuertos</a>
+                                <a className="nav-link" href="aeropuertos" title="Aeropuertos">✈️ Aeropuertos</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="traductor">🌍 Traductor</a>
+                                <a className="nav-link" href="traductor" title="Traduce tus textos">🌍 Traductor</a>
                             </li>
                         </ul>
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="monedas">💰 Conv. Monedas</a>
+                                <a className="nav-link" href="monedas" title="Convierte monedas paises">💰 Conv. Monedas</a>
+                            </li>
+                        </ul>
+                        <ul className="nav flex-column sub-menu">
+                            <li className="nav-item"> 
+                                <a className="nav-link" href="imc" title="Calcula tu IMC">🍔 Calc. IMC</a>
                             </li>
                         </ul>
                     </div>
@@ -116,13 +121,13 @@ export const Sidebar = () => {
                     <div className="collapse" id="sub-web">
                         <ul className="nav flex-column sub-menu">
                             <li className="nav-item"> 
-                                <a className="nav-link" href="url-vars">🧲 Url vars</a>
+                                <a className="nav-link" href="url-vars" title="Parametros url">🧲 Url vars</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="ip-info">🌐 IP info</a>
+                                <a className="nav-link" href="ip-info" title="Informacion IP">🌐 IP info</a>
                             </li>
                             <li className="nav-item"> 
-                                <a className="nav-link" href="color-picker">🎨 Color Picker</a>
+                                <a className="nav-link" href="color-picker" title="Escoge Color">🎨 Color Picker</a>
                             </li>
                         </ul>
                     </div>

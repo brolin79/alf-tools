@@ -54,5 +54,9 @@ export const mapaweb = [
     {
         "enlace": "monedas",
         "tags": "monedas, divisas, convertir, euro, dolar, peso"
+    },
+    {
+        "enlace": "imc",
+        "tags": "imc, indice, masa, corporal, peso, altura, calcula"
     }
 ];

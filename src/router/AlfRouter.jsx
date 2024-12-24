@@ -15,6 +15,7 @@ import { CountryPage } from "../pages/misc/CountryPage";
 import { AirportPage } from "../pages/misc/AirportPage";
 import { TranslationPage } from "../pages/misc/TranslationPage";
 import { CurrencyPage } from "../pages/misc/CurrencyPage";
+import { ImcPage } from "../pages/misc/ImcPage";
 
 import { UrlVarsPage } from "../pages/web/UrlVarsPage";
 import { IpInfoPage } from "../pages/web/IpInfoPage";
@@ -41,6 +42,7 @@ export const AlfRouter = () => {
             <Route path="/aeropuertos" element={ <AirportPage /> } />
             <Route path="/traductor" element={ <TranslationPage /> } />
             <Route path="/monedas" element={ <CurrencyPage /> } />
+            <Route path="/imc" element={ <ImcPage /> } />
             {/* Web */}
             <Route path="/url-vars" element={ <UrlVarsPage /> } />
             <Route path="/ip-info" element={ <IpInfoPage /> } />
