@@ -1,6 +1,7 @@
 import { Navigate, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { HomePage } from "../pages/HomePage";
+import { IaPage } from "../pages/misc/IaPage";
 
 import { PasswordPage } from "../pages/generators/PasswordPage";
 import { LoremIpsumPage } from "../pages/generators/LoremIpsumPage";
@@ -28,6 +29,8 @@ export const AlfRouter = () => {
             {/* Inicio */}
             <Route path="/" element={<HomePage />} />
             <Route path="/inicio" element={<HomePage />} />
+            {/* IA */}
+            <Route path="/google-ai" element={<IaPage />} />
             {/* Generadores */}
             <Route path="/passwords" element={<PasswordPage />} />
             <Route path="/lorem-ipsum" element={<LoremIpsumPage />} />

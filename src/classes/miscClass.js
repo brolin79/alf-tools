@@ -120,6 +120,33 @@ export class MiscClass {
 
     };
 
+    // llama a api de google gemini
+    async google_ai(text) {
+
+        const { VITE_API_KEY_ALF } = envVars();
+        const url = `/alftools-api.php`;
+        const action = 'google_ai';
+
+        try {
+
+            const api = generateApi("alf");
+            const response = await api.post(url, {
+                action: action,
+                apikey: VITE_API_KEY_ALF,
+                text: text
+            });
+
+            console.log("response: ", response);
+
+            return response.data.candidates[0].content.parts[0].text;
+
+        } catch (error) {
+            console.log(error);
+            errorClass.sendError(error, "google_ai");
+        }
+
+    };
+
     // llama a api de monedas para recoger los valores de busqueda
     async currency(search) {
 
