@@ -68,10 +68,14 @@ export const IaPage = () => {
 
                 <div className="col-xl-5 col-sm-12 mb-3">
 
+                    <div className="alert alert-primary" role="alert">
+                        Existe un limite de peticiones por hora, si no obtienes respuesta, vuelve a intentarlo más tarde.
+                    </div>
+
                     <textarea
                         className="form-control"
                         rows="10"
-                        placeholder="Escribe algo..."
+                        placeholder="Escribe tu consulta..."
                         name="texto"
                         value={formValues.texto}
                         onChange={onInputChange}

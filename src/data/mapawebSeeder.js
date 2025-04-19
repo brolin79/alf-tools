@@ -1,5 +1,9 @@
 export const mapaweb = [
     {
+        "enlace": "google-ai",
+        "tags": "inteligencia artificial, gemini, bicho"
+    },
+    {
         "enlace": "passwords",
         "tags": "password, contraseña, uuid, aleatorio"
     },
