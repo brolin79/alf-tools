@@ -27,15 +27,6 @@ export const Sidebar = () => {
                 </li>
 
                 <li className="nav-item menu-items">
-                    <a className="nav-link" href="google-ai">
-                        <span className="menu-icon">
-                            <i className="mdi mdi-robot"></i>
-                        </span>
-                        <span className="menu-title">IA</span>
-                    </a>
-                </li>
-
-                <li className="nav-item menu-items">
                     <a className="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <span className="menu-icon">
                             <i className="mdi mdi-laptop"></i>
