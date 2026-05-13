@@ -31,7 +31,7 @@ export const menuData = [
         descripcion: "Busca y copia emojis fácilmente",
         icono:       "mdi mdi-emoticon",
         seccion:     "Imágenes",
-        color:       "#57B657",
+        color:       "#FFC100",
     },
     {
         enlace:      "gifs",
@@ -39,7 +39,7 @@ export const menuData = [
         descripcion: "Busca y comparte gifs animados",
         icono:       "mdi mdi-image-multiple",
         seccion:     "Imágenes",
-        color:       "#57B657",
+        color:       "#FFC100",
     },
     {
         enlace:      "imagen",
@@ -47,7 +47,7 @@ export const menuData = [
         descripcion: "Imágenes aleatorias, wallpapers y fondos",
         icono:       "mdi mdi-image",
         seccion:     "Imágenes",
-        color:       "#57B657",
+        color:       "#FFC100",
     },
     // Mini Apps
     {
@@ -56,7 +56,7 @@ export const menuData = [
         descripcion: "Consulta la previsión meteorológica",
         icono:       "mdi mdi-weather-sunny",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     {
         enlace:      "paises",
@@ -64,7 +64,7 @@ export const menuData = [
         descripcion: "Información sobre países, monedas y banderas",
         icono:       "mdi mdi-flag",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     {
         enlace:      "aeropuertos",
@@ -72,7 +72,7 @@ export const menuData = [
         descripcion: "Busca información de aeropuertos del mundo",
         icono:       "mdi mdi-airplane",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     {
         enlace:      "traductor",
@@ -80,7 +80,7 @@ export const menuData = [
         descripcion: "Traduce textos con DeepL entre idiomas",
         icono:       "mdi mdi-translate",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     {
         enlace:      "monedas",
@@ -88,7 +88,7 @@ export const menuData = [
         descripcion: "Convierte divisas: euro, dólar, peso...",
         icono:       "mdi mdi-currency-usd",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     {
         enlace:      "imc",
@@ -96,7 +96,7 @@ export const menuData = [
         descripcion: "Calcula tu Índice de Masa Corporal",
         icono:       "mdi mdi-human",
         seccion:     "Mini Apps",
-        color:       "#FFC100",
+        color:       "#FF4747",
     },
     // Web
     {
@@ -105,7 +105,7 @@ export const menuData = [
         descripcion: "Analiza los parámetros de una URL",
         icono:       "mdi mdi-link-variant",
         seccion:     "Web",
-        color:       "#FF4747",
+        color:       "#0090e7",
     },
     {
         enlace:      "ip-info",
@@ -113,7 +113,7 @@ export const menuData = [
         descripcion: "Obtén información de una dirección IP",
         icono:       "mdi mdi-ip-network",
         seccion:     "Web",
-        color:       "#FF4747",
+        color:       "#0090e7",
     },
     {
         enlace:      "color-picker",
@@ -121,7 +121,7 @@ export const menuData = [
         descripcion: "Selecciona y convierte colores RGB / HEX",
         icono:       "mdi mdi-palette",
         seccion:     "Web",
-        color:       "#FF4747",
+        color:       "#0090e7",
     },
 ];
 
